@@ -13,14 +13,36 @@ import SwiftUI
 
 struct GameLogic {
 
-    static func startGame(colors: [Color]) -> [Tile] {
-        colors.flatMap { [Tile(color: $0), Tile(color: $0)] }.shuffled()
+    // Generate tiles uniquely 
+    static func generateTiles(gridSize: Int, colors: [Color]) -> [Tile] {
+        let totalTiles = gridSize * gridSize
+        let pairCount = totalTiles / 2 // floor division
+        let selectedColors = colors.shuffled().prefix(pairCount)
+        
+        var tiles: [Tile] = []
+        
+        // create pairs
+        for color in selectedColors {
+            tiles.append(Tile(color: color))
+            tiles.append(Tile(color: color))
+        }
+        
+        // if totalTiles is odd, add 1 extra tile as Joker
+        if totalTiles % 2 != 0 {
+            let jokerTile = Tile(color: .purple, isJoker: true)
+            tiles.append(jokerTile)
+        }
+        
+        tiles.shuffle()
+        return tiles
     }
 
-    static func isMatch(_ tiles: [Tile], _ selected: [Int]) -> Bool {
-        let first = selected[0]
-        let second = selected[1]
+    // Check if two selected tiles match
+    static func isMatch(_ tiles: [Tile], _ selectedIndexes: [Int]) -> Bool {
+        let first = selectedIndexes[0]
+        let second = selectedIndexes[1]
         return tiles[first].color == tiles[second].color
     }
 }
+
 

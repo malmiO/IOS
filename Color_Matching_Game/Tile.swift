@@ -13,5 +13,6 @@ struct Tile: Identifiable {
     let color: Color
     var isFlipped = false
     var isMatched = false
+    var isJoker = false
 }
 
