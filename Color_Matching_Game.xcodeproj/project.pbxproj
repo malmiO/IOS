@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		65DAC1AE2F16398600AC2949 /* Color_Matching_Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Color_Matching_Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65DAC1AE2F16398600AC2949 /* Color_Matching_Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Color_Matching_Game.app; path = "/Users/cobsccomp24.2p-074/IOS/Color_Matching_Game/build/Debug-iphoneos/Color_Matching_Game.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,16 +33,7 @@
 			isa = PBXGroup;
 			children = (
 				65DAC1B02F16398600AC2949 /* Color_Matching_Game */,
-				65DAC1AF2F16398600AC2949 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		65DAC1AF2F16398600AC2949 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				65DAC1AE2F16398600AC2949 /* Color_Matching_Game.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,7 +86,7 @@
 			mainGroup = 65DAC1A52F16398500AC2949;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 65DAC1AF2F16398600AC2949 /* Products */;
+			productRefGroup = 65DAC1A52F16398500AC2949;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
