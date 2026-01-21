@@ -1,29 +1,64 @@
-# Color Matching Game 🎨🃏
+# HueQuest – Color Matching Game 🎨🃏
 
-A fun and interactive **Color Matching Game** built with **SwiftUI** for iOS. The game challenges your memory and reflexes with **three difficulty levels** (3×3, 5×5, 7×7 grids), a **hidden Joker tile** for a playful twist, and a **click counter** to track your moves. Each level dynamically generates pairs of colored tiles that players must match. If you click on the Joker tile, a fun message appears, and the game resets automatically, adding an element of surprise. The game also displays success messages when all pairs are matched, making it engaging and rewarding for players of all ages.
+**HueQuest** is a fun and interactive **Color Matching Game** built with **SwiftUI** for iOS. The game challenges your memory and reflexes with **three difficulty levels**, a **hidden Joker tile**, a **click counter**, and a **timer** to track your performance. Players can also **save their scores and view history** in the Profile section, making it engaging, replayable, and rewarding.
 
 ---
 
 ## Features
 
-- **Three Levels of Difficulty:**  
-  - Level 1 → 3×3  
-  - Level 2 → 5×5  
-  - Level 3 → 7×7  
+### Game Mechanics
 
-- **Matching Game Mechanics:**  
+- **Three Levels of Difficulty:**  
+  - Level 1 → 3×3 grid  
+  - Level 2 → 5×5 grid  
+  - Level 3 → 7×7 grid  
+
+- **Matching Tiles:**  
   - Flip tiles to find matching color pairs  
-  - Tiles stay flipped once matched  
+  - Matched tiles stay revealed  
+  - Tiles flip with smooth **3D rotation animation**  
 
 - **Hidden Joker Tile 🃏:**  
   - Appears in all odd-grid levels  
-  - Clicking it displays a fun message and automatically resets the game  
+  - Clicking it displays a playful message and resets the game  
 
-- **Click Counter:** Tracks the number of tile flips  
+- **Click Counter:** Tracks the number of tile flips for each game  
 
-- **Dynamic Grid Layout:** Adapts to the selected level  
+- **Timer:** Smoothly counts seconds elapsed during gameplay  
 
-- **Restart Button:** Reset the game anytime  
+- **Dynamic Grid Layout:** Adapts automatically to the selected level  
+
+- **Restart Button:** Reset the game at any time  
 
 ---
+
+### Profile & Score Tracking
+
+- **Player Onboarding:** Enter your name and select an avatar on first launch  
+- **Score History:**  
+  - Tracks every completed game with **level, score, date, and game name**  
+  - Displays scores in the Profile section  
+- **Score Calculation:** Based on **clicks** and **time** to reward efficiency  
+
+---
+
+### User Interface
+
+- **Home Page:**  
+  - Displays player avatar and name  
+  - Shows all available games as clickable cards  
+  - Navigate to **Level Select** for each game  
+
+- **Level Select Screen:**  
+  - Choose your level before starting the game  
+
+- **Game Screen:**  
+  - Displays **Level, Clicks, Timer**  
+  - Smooth tile flip animations  
+  - Joker tile interaction  
+  - Restart button  
+
+- **Profile Screen:**  
+  - View player info (name & avatar)  
+  - Full score history with details  
 
