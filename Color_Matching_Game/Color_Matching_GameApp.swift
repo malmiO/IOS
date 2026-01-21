@@ -11,7 +11,13 @@ import SwiftUI
 struct Color_Matching_GameApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if playerData.hasOnboarded {
+                MainTabView()
+                    .environmentObject(playerData)
+            } else {
+                SplashView()
+                    .environmentObject(playerData)
+            }
         }
     }
 }
