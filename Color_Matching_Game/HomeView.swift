@@ -12,31 +12,44 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
+
+                // Top Bar
                 HStack {
-                    Text(playerData.playerAvatar).font(.largeTitle)
+                    Text(playerData.playerAvatar)
+                        .font(.largeTitle)
                     Spacer()
-                    Text("HueQuest").font(.title).bold()
+                    Text("HueQuest")
+                        .font(.title)
+                        .bold()
                     Spacer()
                 }
                 .padding(.horizontal)
-                
+
+                // Greeting
                 Text("Welcome, \(playerData.playerName)!")
                     .font(.title2)
                     .padding(.bottom)
-                
+
+                // Game Cards
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 20) {
                         ForEach(games, id: \.0) { game in
                             NavigationLink(destination: LevelSelectView(gameName: game.0)) {
                                 VStack {
-                                    Text(game.1).font(.system(size: 50))
-                                    Text(game.0).font(.headline).foregroundColor(.white)
+                                    Text(game.1)
+                                        .font(.system(size: 50))
+                                    Text(game.0)
+                                        .font(.headline)
+                                        .foregroundColor(.white)
                                 }
                                 .frame(height: 150)
                                 .frame(maxWidth: .infinity)
                                 .background(
-                                    LinearGradient(colors: [Color.blue.opacity(0.8), Color.purple.opacity(0.8)],
-                                                   startPoint: .topLeading, endPoint: .bottomTrailing)
+                                    LinearGradient(
+                                        colors: [Color.blue.opacity(0.8), Color.purple.opacity(0.8)],
+                                        startPoint: .topLeading,
+                                        endPoint: .bottomTrailing
+                                    )
                                 )
                                 .cornerRadius(20)
                                 .shadow(radius: 5)
@@ -46,7 +59,7 @@ struct HomeView: View {
                     }
                     .padding()
                 }
-                
+
                 Spacer()
             }
             .navigationBarHidden(true)

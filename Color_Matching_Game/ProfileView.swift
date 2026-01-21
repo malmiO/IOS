@@ -9,12 +9,12 @@ struct ProfileView: View {
                 .font(.system(size: 80))
             Text(playerData.playerName)
                 .font(.title)
-            
+
             Divider()
-            
+
             Text("Score History")
                 .font(.headline)
-            
+
             ScrollView {
                 ForEach(playerData.scores.reversed()) { score in
                     HStack {
@@ -29,7 +29,6 @@ struct ProfileView: View {
                     .padding(.horizontal)
                 }
             }
-            
             Spacer()
         }
         .padding()

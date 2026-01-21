@@ -18,7 +18,11 @@ struct LevelSelectView: View {
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(
-                            LinearGradient(colors: [Color.blue, Color.purple], startPoint: .topLeading, endPoint: .bottomTrailing)
+                            LinearGradient(
+                                colors: [Color.blue, Color.purple],
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
                         )
                         .foregroundColor(.white)
                         .cornerRadius(12)
@@ -26,6 +30,7 @@ struct LevelSelectView: View {
                         .padding(.horizontal)
                 }
             }
+
             Spacer()
         }
         .navigationBarTitle("Levels", displayMode: .inline)
