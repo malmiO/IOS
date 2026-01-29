@@ -62,3 +62,4 @@
   - View player info (name & avatar)  
   - Full score history with details  
 
+https://chat.deepseek.com/share/cqvaki5jcvu4z47w2c
